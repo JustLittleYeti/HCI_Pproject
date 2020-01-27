@@ -57,3 +57,4 @@ class Game:
 
     def lose(self):
         self.run = False
+        

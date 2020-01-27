@@ -65,7 +65,7 @@ def gameMain():
     pygame.init()
  
     while True:
-   
+        
         while game.run:
            
             pygame.time.delay(20)
@@ -91,7 +91,8 @@ def gameMain():
                 game.renderFrame()
            
             if not game.run:
-                pygame.time.delay(1000)
+                pygame.time.delay(500)
+                # przy zmniejszeniu wart działa na jednego esc
                
        
         for event in pygame.event.get():
@@ -108,6 +109,7 @@ def gameMain():
         if keys[pygame.K_ESCAPE]:
             quit_program.set()
             return
+
        
 if __name__ == "__main__":
  
@@ -129,7 +131,7 @@ if __name__ == "__main__":
  
     #uruchomienie gry
     gameMain()
- 
+    
     # Zakończenie podprocesów
     proc_blink_det.join()
     pygame.quit()
