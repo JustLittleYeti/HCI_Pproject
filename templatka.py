@@ -65,7 +65,10 @@ def gameMain():
     pygame.init()
  
     while True:
-        
+
+        if quit_program.is_set():
+            break
+
         while game.run:
            
             pygame.time.delay(20)
